@@ -1,0 +1,72 @@
+@use "reset";
+@use "variables";
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
+
+body {
+  font-size: 1.6rem;
+  font-family: "Sora", sans-serif;
+}
+
+.container {
+  max-width: 144rem;
+}
+
+nav,
+.nav-left,
+.navbar-links {
+  display: flex;
+  align-items: center;
+}
+
+nav {
+  padding: 3rem 12rem;
+  justify-content: space-between;
+  gap: 33%;
+  height: auto;
+}
+
+.nav-left {
+  align-items: center;
+  gap: 0.8rem;
+
+  img {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
+
+  p {
+    font-size: 2.2rem;
+    color: variables.$main-text-color;
+    font-weight: 800;
+    line-height: 120%;
+  }
+}
+
+.navbar-links {
+  justify-content: space-between;
+  align-items: center;
+  gap: 3.3rem;
+
+  a {
+    color: variables.$main-text-color;
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-weight: 600;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .email-btn {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    color: variables.$accent-color-blue;
+    font-weight: 700;
+    padding: 1.3rem 1.6rem;
+    border: 1px solid variables.$accent-color-blue;
+    border-radius: 50px;
+    width: 15rem;
+  }
+}
