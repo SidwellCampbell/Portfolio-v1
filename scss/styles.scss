@@ -9,18 +9,22 @@ body {
 
 .container {
   max-width: 144rem;
+  margin: 0 auto;
 }
-.container,
+
 .nav-left,
 .navbar-links {
   display: flex;
   align-items: center;
 }
 
-.container {
-  justify-content: space-between;
-  height: auto;
-  padding: 3rem 12rem;
+nav {
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 3rem 12rem;
+  }
 }
 
 .nav-left {
@@ -64,7 +68,7 @@ body {
 }
 
 .hero {
-  display: flex;
+  // display: flex;
   // padding: 0 12rem;
   background-color: variables.$bg-color;
   width: 100vw;
@@ -72,6 +76,14 @@ body {
   gap: 3.8rem;
   justify-content: space-between;
   align-items: center;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    height: auto;
+    padding: 3rem 12rem;
+    align-items: center;
+  }
 
   h1 {
     font-size: 8.4rem;
@@ -140,3 +152,67 @@ body {
     }
   }
 }
+
+.about {
+  background-color: variables.$main-text-color;
+  color: #ffffff;
+
+  .container {
+    padding: 14rem 12rem;
+  }
+
+  .about-flex-container {
+    display: flex;
+    gap: 6rem;
+  }
+
+  .about-left {
+    display: flex;
+    flex-direction: column;
+    gap: 4.8rem;
+    width: 50%;
+  }
+
+  .about-right {
+    width: 50%;
+    align-self: stretch;
+  }
+
+  .about-heading {
+    color: variables.$subheading-grey;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 140%;
+    margin-bottom: 3.2rem;
+  }
+
+  .about-intro {
+    font-size: 5.2rem;
+    font-weight: 600;
+    line-height: 6rem;
+  }
+
+  .about-body {
+    font-size: 2rem;
+    line-height: 160%;
+    font-weight: 400;
+    margin-bottom: 4rem;
+  }
+
+  .social-icons {
+    color: variables.$accent-color-blue;
+    display: flex;
+    gap: 2.4rem;
+
+    svg {
+      height: 5rem;
+      width: auto;
+      background-color: variables.$accent-color-blue;
+      padding: 1rem;
+      border-radius: 50%;
+      overflow: visible;
+    }
+  }
+}
+
+// }
