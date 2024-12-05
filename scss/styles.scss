@@ -10,29 +10,21 @@ body {
 .container {
   max-width: 144rem;
 }
-
-nav,
+.container,
 .nav-left,
 .navbar-links {
   display: flex;
   align-items: center;
 }
 
-nav {
-  padding: 3rem 12rem;
+.container {
   justify-content: space-between;
-  gap: 33%;
   height: auto;
+  padding: 3rem 12rem;
 }
 
 .nav-left {
-  align-items: center;
   gap: 0.8rem;
-
-  img {
-    width: 4.8rem;
-    height: 4.8rem;
-  }
 
   p {
     font-size: 2.2rem;
@@ -68,5 +60,83 @@ nav {
     border: 1px solid variables.$accent-color-blue;
     border-radius: 50px;
     width: 15rem;
+  }
+}
+
+.hero {
+  display: flex;
+  // padding: 0 12rem;
+  background-color: variables.$bg-color;
+  width: 100vw;
+  height: calc(100vh - 15rem);
+  gap: 3.8rem;
+  justify-content: space-between;
+  align-items: center;
+
+  h1 {
+    font-size: 8.4rem;
+    font-weight: 800;
+    line-height: 120%;
+    margin-bottom: 4.8rem;
+  }
+
+  p {
+    font-size: 2rem;
+    font-weight: 400;
+    line-height: 160%;
+    margin-bottom: 4.8rem;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  .hero-text {
+    flex: 1 1 50%;
+  }
+
+  .hero-img {
+    flex: 1 1 50%;
+    img {
+      width: 100%;
+      min-width: 50rem;
+      height: auto;
+    }
+  }
+}
+
+.hero-links {
+  display: flex;
+  gap: 5.6rem;
+  font-size: 1.6rem;
+  align-items: center;
+
+  .hero-email-btn {
+    background-color: variables.$accent-color-blue;
+    color: #ffffff;
+    padding: 1.6rem 3.2rem;
+    border-radius: 70px;
+    display: flex;
+    gap: 4.2rem;
+    align-items: center;
+    transition: all 0.3s;
+
+    &:hover {
+      background-color: variables.$accent-color-hover;
+    }
+
+    img {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+  }
+  .resume-link {
+    color: variables.$accent-color-blue;
+    font-weight: 600;
+    transition: all 3s;
+    // font-size: 30rem;
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
