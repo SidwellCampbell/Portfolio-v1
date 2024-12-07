@@ -244,6 +244,7 @@ nav {
     border-radius: 5rem;
     justify-content: space-around;
     gap: 3.2rem;
+    margin-bottom: 6.8rem;
     // position: relative;
   }
 
@@ -258,10 +259,42 @@ nav {
     cursor: pointer;
   }
 
+  .hidden {
+    display: none;
+  }
+
   .selected {
     background-color: variables.$accent-color-blue;
     color: #ffffff;
     border-radius: 70px;
+  }
+}
+
+.tool-grid {
+  display: grid;
+  gap: 4rem 4.8rem;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  justify-content: center;
+  align-items: center;
+}
+
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  img {
+    width: 10rem;
+    height: 10rem;
+    height: auto;
+    margin-bottom: 0.8rem;
+  }
+  p {
+    color: variables.$main-text-color;
+    font-size: 2rem;
+    letter-spacing: -0.2px;
+    text-align: center;
   }
 }
 
