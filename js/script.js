@@ -9,10 +9,19 @@ buttons.forEach((button) => {
       btn.classList.remove("selected");
     });
     this.classList.add("selected");
-    if (this.classList.contains("language")) {
+    //grab the class of the button that was selected
+    let filterOn = this.classList.item(1);
+    if (filterOn === "all") {
       toolCards.forEach((card) => {
-        if (!card.classList.contains("language")) {
-          card.style.display = "none";
+        card.classList.remove("hidden");
+      });
+    } else {
+      toolCards.forEach((card) => {
+        //if card class doesn't match selected button, hide card.
+        if (!card.classList.contains(filterOn)) {
+          card.classList.add("hidden");
+        } else {
+          card.classList.remove("hidden");
         }
       });
     }
