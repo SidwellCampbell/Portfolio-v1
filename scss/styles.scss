@@ -1,10 +1,12 @@
 @use "reset";
 @use "variables";
+@use "mixins";
 @import url("https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap");
 
 body {
   font-size: 1.6rem;
   font-family: "Sora", sans-serif;
+  // margin: 0 auto;
 }
 
 .container {
@@ -31,10 +33,7 @@ nav {
   gap: 0.8rem;
 
   p {
-    font-size: 2.2rem;
-    color: variables.$main-text-color;
-    font-weight: 800;
-    line-height: 120%;
+    @include mixins.logo-styling(variables.$main-text-color);
   }
 }
 
@@ -124,23 +123,11 @@ nav {
   align-items: center;
 
   .hero-email-btn {
+    @include mixins.email-btn;
+    @include mixins.hover-btn;
+    @include mixins.btn-arrow;
     background-color: variables.$accent-color-blue;
     color: #ffffff;
-    padding: 1.6rem 3.2rem;
-    border-radius: 70px;
-    display: flex;
-    gap: 4.2rem;
-    align-items: center;
-    transition: all 0.3s;
-
-    &:hover {
-      background-color: variables.$accent-color-hover;
-    }
-
-    img {
-      width: 2.4rem;
-      height: 2.4rem;
-    }
   }
   .resume-link {
     color: variables.$accent-color-blue;
@@ -190,6 +177,14 @@ nav {
     font-size: 5.2rem;
     font-weight: 600;
     line-height: 6rem;
+
+    .about-span1 {
+      color: variables.$pink;
+    }
+
+    .about-span2 {
+      color: variables.$neon;
+    }
   }
 
   .about-body {
@@ -200,7 +195,6 @@ nav {
   }
 
   .social-icons {
-    color: variables.$accent-color-blue;
     display: flex;
     gap: 2.4rem;
 
@@ -356,6 +350,16 @@ nav {
       flex-direction: column;
       gap: 1.3rem;
     }
+
+    .project-tools {
+      display: flex;
+      gap: 1rem;
+
+      img {
+        width: 2.4rem;
+        height: 2.4rem;
+      }
+    }
     .project-type {
       color: variables.$accent-color-blue;
       font-size: 1.6rem;
@@ -372,6 +376,136 @@ nav {
       font-size: 1.6rem;
       line-height: 2.3rem;
       color: variables.$main-text-color;
+    }
+  }
+}
+
+.call-to-action {
+  display: flex;
+  justify-content: center;
+  background-color: variables.$main-text-color;
+
+  .cta-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: variables.$accent-color-blue;
+    border-radius: 3.5rem;
+    color: #ffffff;
+    padding: 5.9rem 34.9rem;
+    margin-top: -7rem;
+    margin-bottom: 7.1rem;
+  }
+
+  h2 {
+    font-size: 6.4rem;
+    font-weight: 700;
+    line-height: 6.5rem;
+    margin-bottom: 2rem;
+    letter-spacing: -5.5%;
+  }
+
+  p {
+    font-size: 2rem;
+    line-height: 2.8rem;
+    margin-bottom: 3.6rem;
+  }
+
+  a {
+    @include mixins.email-btn;
+    @include mixins.btn-arrow;
+    text-decoration: none;
+    background-color: #ffffff;
+    padding: 1.6rem 3.2rem;
+    border-radius: 7rem;
+    font-weight: 700;
+    color: variables.$main-text-color;
+    width: 42%;
+  }
+}
+
+.footer {
+  background-color: variables.$main-text-color;
+
+  .container {
+    padding: 0 12rem 9rem 12rem;
+  }
+
+  .footer-top {
+    display: flex;
+    justify-content: space-between;
+
+    .footer-logo {
+      @include mixins.logo-styling(#ffffff);
+      gap: 0.8rem;
+      margin-bottom: 3rem;
+      // display: flex;
+      // align-items: center;
+      // color: #fff;
+      // font-size: 2.2rem;
+      // font-weight: 800;
+    }
+
+    .tag {
+      font-size: 1.6rem;
+      line-height: 153.5%;
+      color: #fff;
+      opacity: 0.6;
+    }
+  }
+
+  .footer-top-right {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+
+    .contact-detail {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .social-icons {
+      display: flex;
+      gap: 2.4rem;
+      justify-content: center;
+      width: 100%;
+
+      svg {
+        height: 4rem;
+        width: auto;
+        background-color: #fff;
+        padding: 0.8rem;
+        border-radius: 50%;
+        overflow: visible;
+        fill: black;
+      }
+    }
+  }
+  hr {
+    height: 1px;
+    border-color: #404040;
+    margin: 3rem 0;
+  }
+
+  .footer-bottom {
+    display: flex;
+
+    ul {
+      display: flex;
+      gap: 3.2rem;
+
+      a {
+        text-decoration: none;
+        cursor: pointer;
+        color: #fff;
+      }
+    }
+    p {
+      color: #fff;
+      opacity: 0.6;
+      margin-left: auto;
     }
   }
 }
