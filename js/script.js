@@ -27,3 +27,26 @@ buttons.forEach((button) => {
     }
   });
 });
+
+window.onscroll = function () {
+  navbarMinimizer();
+};
+
+function navbarMinimizer() {
+  if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
+    document.getElementById("navbar").style.padding = "15px 120px";
+    // document.getElementById("logo").style.fontSize = "25px";
+  } else {
+    document.getElementById("navbar").style.padding = "30px 120px";
+    // document.getElementById("logo").style.fontSize = "35px";
+  }
+}
+
+const hamburger = document.querySelector(".hamburger");
+const navBar = document.querySelector(".navbar-links");
+
+hamburger.addEventListener("click", () => {
+  console.log("clicked");
+  hamburger.classList.toggle("active");
+  navBar.classList.toggle("active");
+});

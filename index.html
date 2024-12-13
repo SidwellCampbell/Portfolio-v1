@@ -12,7 +12,7 @@
     <!-- NAV BAR -->
 
     <nav>
-      <div class="container">
+      <div class="container" id="navbar">
         <div class="nav-left">
           <img src="images/tev-logo.png" alt="" />
           <p>TevinCampbell</p>
@@ -20,11 +20,17 @@
         <div class="nav-right">
           <ul class="navbar-links">
             <li><a href="#">Home</a></li>
-            <li><a href="#">Tools</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#" class="email-btn">Send Email</a></li>
+            <li><a href="#tools">Tools</a></li>
+            <li><a href="#projects">Work</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:tevinc.dev@gmail.com" class="email-btn">Send Email</a></li>
           </ul>
+          <div class="hamburger">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </div>
+
         </div>
       </div>
     </nav>
@@ -37,10 +43,13 @@
           <h1>Hi!, I'm Tevin Campbell.</h1>
           <p>A Full-Stack Software Engineer in New York City.</p>
           <div class="hero-links">
-            <a href="#" class="hero-email-btn"
+            <a href="mailto:tevinc.dev@gmail.com" class="hero-email-btn"
               >Send Email<img src="images/arrow.svg" alt=""
             /></a>
-            <a href="#" class="resume-link">Download My Resume</a>
+            <a class="resume-link" href="/images/Tevin-Campbell-Res1.pdf" download="Tevin-Campbell-Resume">
+              Download My Resume
+            </a>
+            <!-- <a href="#" class="resume-link">Download My Resume</a> -->
           </div>
         </div>
         <div class="hero-img">
@@ -51,7 +60,7 @@
 
     <!-- ABOUT ME SECTION -->
 
-    <section class="about">
+    <section class="about" id="about">
       <div class="container">
         <p class="about-heading">ABOUT</p>
         <div class="about-flex-container">
@@ -74,7 +83,7 @@
               to collaborate!"
             </p>
             <div class="social-icons">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/tevcamp/" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -99,7 +108,7 @@
                     </clipPath>
                   </defs></svg
               ></a>
-              <a href="#"
+              <a href="https://github.com/sidwellcampbell" target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="37"
@@ -134,7 +143,7 @@
 
 <!-- TOOLS SECTION -->
     
-<section class="tools">
+<section class="tools" id="tools">
       <div class="container">
         <h2>MY TOOLS</h2>
         <h3>I can help you with...</h3>
@@ -253,7 +262,7 @@
 
     <!-- PROJECTS SECTION -->
 
-    <section class="projects">
+    <section class="projects" id="projects">
       <div class="container">
         <h2>Work</h2>
         <h3>My Projects</h3>
@@ -300,14 +309,20 @@
         </div>
       </div>
     </section>
-    <section class="call-to-action">
-      <div class="cta-container">
-        <h2>Let’s connect!</h2>
-        <p class="cta-sub-heading">
-          Explore my projects or reach out via LinkedIn or email.
-        </p>
-        <a href="#">Send Email<img src="images/arrow-black.svg" alt="" /></a>
-      </div>
+    
+        <!-- CALL TO ACTION SECTION -->
+
+    <section class="call-to-action" id="contact">
+      <!-- <div class="container"> -->
+        <div class="cta-container">
+          <h2>Let’s connect!</h2>
+          <p class="cta-sub-heading">
+            Explore my projects or reach out via LinkedIn or email.
+          </p>
+          <a href="mailto:tevinc.dev@gmail.com">Send Email<img src="images/arrow-black.svg" alt="" /></a>
+        </div>
+      <!-- </div> -->
+
     </section>
 
     <!-- FOOTER SECTION -->
@@ -339,7 +354,7 @@
             </div>
   
             <div class="social-icons">
-              <a href="#">
+              <a href="https://www.linkedin.com/in/tevcamp/" target="_blank">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -364,7 +379,7 @@
                     </clipPath>
                   </defs></svg
               ></a>
-              <a href="#"
+              <a href="https://github.com/sidwellcampbell" target="_blank"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="37"
