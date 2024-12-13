@@ -722,18 +722,6 @@ nav .container .hamburger .bar {
   nav .container .navbar-links.active {
     left: 0;
   }
-  nav .navbar-links {
-    position: fixed;
-    left: -100%;
-    top: 70px;
-    flex-direction: column;
-    background-color: #ffffff;
-    text-align: center;
-    transition: all 0.3s;
-    width: 100%;
-    gap: 1.6rem 0;
-    opacity: 0.9;
-  }
 }
 @media (max-width: 768px) {
   .tools .tool-bar {
@@ -749,11 +737,133 @@ nav .container .hamburger .bar {
   nav .container {
     padding: 1.4rem 2rem;
   }
+  nav .container .navbar-links {
+    position: fixed;
+    left: -100%;
+    top: 65px;
+  }
+  nav .container .navbar-links.active {
+    left: 0;
+  }
   nav .container img {
     height: 4rem;
     width: 4rem;
   }
-  nav .container p {
+  .hero {
+    padding-top: 6rem;
+  }
+  .hero .container {
+    flex-direction: column;
+    text-align: center;
+    padding: 4rem 2.4rem;
+  }
+  .hero .container h1 {
+    font-size: 4.8rem;
+    margin-bottom: 2rem;
+    font-weight: 700;
+    padding-top: 0;
+  }
+  .hero .container p {
+    margin-bottom: 2.8rem;
+  }
+  .hero .container .hero-links {
+    align-items: center;
+    padding-bottom: 3rem;
+  }
+  .about .container {
+    padding: 6rem 2.4rem;
+  }
+  .about .container .about-left .about-intro {
+    font-size: 3.2rem;
+    line-height: 4rem;
+  }
+  .about .container .about-right .about-body {
+    font-size: 1.6rem;
+  }
+  .tools .container {
+    padding: 6rem 2.4rem;
+  }
+  .tools h3 {
+    font-size: 3.2rem;
+  }
+  .tools .tool-bar {
     display: none;
+  }
+  .tools .tool-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .projects .container {
+    padding: 6rem 2.4rem;
+  }
+  .projects h3 {
+    font-size: 3.2rem;
+  }
+  .projects .project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+  }
+  .projects .project-grid .project-card {
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+  .projects .project-grid .project-card > img:first-child {
+    width: 100%;
+  }
+  .projects .project-grid .project-card .project-text {
+    width: 100%;
+    padding: 0 2rem 2rem 2rem;
+  }
+  .projects .project-grid .project-card .project-text .project-type {
+    font-size: 1.4rem;
+  }
+  .projects .project-grid .project-card .project-text .project-title {
+    font-size: 1.8rem;
+  }
+  .projects .project-grid .project-card .project-text .project-desc {
+    font-size: 1.4rem;
+  }
+  .call-to-action .cta-container {
+    padding: 4rem 0rem;
+    width: 100%;
+    border-radius: 0;
+    text-align: center;
+    height: 30rem;
+  }
+  .call-to-action .cta-container h2 {
+    font-size: 4.8rem;
+  }
+  .footer .container {
+    padding: 0 2.4rem 6rem 2.4rem;
+  }
+  .footer .footer-top {
+    flex-direction: column;
+    gap: 2.4rem;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .footer-top .footer-logo {
+    margin-bottom: 0;
+  }
+  .footer .footer-top-right .contact-detail {
+    gap: 1.6rem;
+  }
+  .footer .footer-top-right .contact-detail:nth-of-type(2) {
+    align-self: center;
+  }
+  .footer .footer-top-right .social-icons {
+    justify-content: center;
+  }
+  .footer .footer-bottom {
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+  .footer .footer-bottom ul {
+    justify-content: space-around;
+    gap: 1.6rem;
+  }
+  .footer .footer-bottom p {
+    align-self: center;
+    margin-left: 0;
   }
 }
