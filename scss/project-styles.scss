@@ -1,0 +1,92 @@
+@use "variables";
+
+.main-container {
+  background-color: variables.$bg-color;
+  padding: 20rem 12rem 12rem 12rem;
+
+  .project-container {
+    padding: 0 12rem;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .project-type {
+    font-size: 1.6rem;
+    color: #1d1d1d9c;
+    margin-bottom: 2.4rem;
+  }
+  h1 {
+    font-size: 5.4rem;
+    line-height: 6.4rem;
+    font-weight: 600;
+    margin-bottom: 2.4rem;
+  }
+
+  .project-tools {
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    margin-bottom: 6rem;
+
+    img {
+      width: 7.5rem;
+    }
+  }
+
+  .project-img {
+    width: 100%;
+    border-radius: 16px;
+  }
+
+  .project-links {
+    display: flex;
+    justify-content: center;
+    gap: 3.2rem;
+    a {
+      text-decoration: none;
+      color: variables.$accent-color-blue;
+      font-weight: 700;
+      border: 1px solid variables.$accent-color-blue;
+      padding: 1.3rem 1.6rem;
+      border-radius: 50px;
+      gap: 2rem;
+      margin: 6rem 0 6rem 0;
+      background-color: #fff;
+      display: flex;
+    }
+  }
+
+  .project-text {
+    font-size: 2rem;
+    line-height: 3.2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 2.4rem;
+  }
+
+  h2 {
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+  }
+  .project-bullets {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.4rem;
+
+    li {
+      text-align: left;
+    }
+
+    .bullet-heading {
+      font-weight: 600;
+    }
+  }
+}
+
+.footer {
+  padding-top: 5rem;
+}
