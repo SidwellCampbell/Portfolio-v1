@@ -30,11 +30,12 @@
     gap: 2.4rem;
     margin-bottom: 6rem;
 
-    .project-tools-poke {
+    &.poke {
+      display: grid;
       grid-template-columns: repeat(6, 1fr);
     }
 
-    .project-tools-port {
+    &.port {
       grid-template-columns: repeat(5, 1fr);
     }
 
@@ -150,13 +151,10 @@
 
     .project-tools {
       gap: 2rem;
-      img {
-        width: 4.8rem;
-      }
     }
+  }
 
-    .project-img {
-      min-width: 40rem;
-    }
+  .project-img {
+    min-width: 40rem;
   }
 }
