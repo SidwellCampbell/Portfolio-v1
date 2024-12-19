@@ -24,7 +24,9 @@
   }
 
   .project-tools {
-    display: flex;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     gap: 2.4rem;
     margin-bottom: 6rem;
