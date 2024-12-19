@@ -22,10 +22,15 @@
 .main-container .project-tools {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
   justify-content: center;
   gap: 2.4rem;
   margin-bottom: 6rem;
+}
+.main-container .project-tools .project-tools-poke {
+  grid-template-columns: repeat(6, 1fr);
+}
+.main-container .project-tools .project-tools-port {
+  grid-template-columns: repeat(5, 1fr);
 }
 .main-container .project-tools img {
   width: 7.5rem;
